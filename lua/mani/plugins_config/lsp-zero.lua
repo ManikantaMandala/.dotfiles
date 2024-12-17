@@ -30,7 +30,7 @@ return {
 		require('mason-lspconfig').setup({
 			-- Replace the language servers listed here
 			-- with the ones you want to install
-			ensure_installed = { 'tsserver', 'rust_analyzer' },
+			ensure_installed = { 'ts_ls', 'rust_analyzer' },
 			automatic_installation = true,
 			handlers = {
 				lsp_zero.default_setup,
@@ -83,16 +83,6 @@ return {
 					}
 				})
 			},
-		})
-
-		lsp_zero.set_preferences({
-			suggest_lsp_servers = false,
-			sign_icons = {
-				error = 'E',
-				warn = 'W',
-				hint = 'H',
-				info = 'I'
-			}
 		})
 
 		lsp_zero.setup()
